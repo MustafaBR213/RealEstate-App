@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_app/colors.dart';
+import 'package:real_estate_app/src/core/presentaion/pages/home_page.dart';
 import 'package:real_estate_app/src/core/presentaion/widgets/text_header.dart';
 import 'package:real_estate_app/src/core/presentaion/widgets/text_meduim.dart';
 import 'package:real_estate_app/src/user_managment/presentaion/components/social_media_component.dart';
@@ -97,7 +98,9 @@ class SignInPage extends StatelessWidget {
                 ),
                 Button(
                   name: "تسجيل الدخول",
-                  onTap: () {},
+                 onTap: () {
+                            Navigator.pushNamed(context, HomePage.route);
+                          },
                 ),
                 const SizedBox(
                   height: 20,
