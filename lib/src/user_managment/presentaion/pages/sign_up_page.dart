@@ -1,5 +1,6 @@
 import 'package:extended_phone_number_input/phone_number_input.dart';
 import 'package:flutter/material.dart';
+import 'package:real_estate_app/src/core/presentaion/pages/home_page.dart';
 import 'package:real_estate_app/src/core/presentaion/widgets/text_header.dart';
 import 'package:real_estate_app/src/core/presentaion/widgets/text_meduim.dart';
 import 'package:real_estate_app/src/user_managment/presentaion/components/social_media_component.dart';
@@ -7,7 +8,6 @@ import 'package:real_estate_app/src/user_managment/presentaion/widgets/button.da
 import 'package:real_estate_app/src/core/presentaion/widgets/input_text.dart';
 import 'package:real_estate_app/src/user_managment/presentaion/widgets/phone_number_widget.dart';
 import 'package:real_estate_app/src/user_managment/presentaion/widgets/profile_pic_widget.dart';
-
 
 class SignUpPage extends StatelessWidget {
   SignUpPage({super.key});
@@ -68,9 +68,14 @@ class SignUpPage extends StatelessWidget {
                     const SizedBox(
                       height: 40,
                     ),
-                    const Align(
+                    Align(
                         alignment: Alignment.center,
-                        child: Button(name: "تسجيل الدخول")),
+                        child: Button(
+                          name: "تسجيل الدخول",
+                          onTap: () {
+                            Navigator.pushNamed(context, HomePage.route);
+                          },
+                        )),
                     const SizedBox(
                       height: 10,
                     ),
